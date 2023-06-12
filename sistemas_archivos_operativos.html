@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #0067b1;
+            color: white;
+            font-family:Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: yellow;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 1000px;
+            background-color: black;
+        }
+        .tabla {
+            display: flex;
+            justify-content: center;
+        }
+
+        td, th {
+            border: 1px solid gray;
+            text-align: left;
+            padding: 8px;
+        }
+        th{
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: white;
+            color: black;
+        }
+        .inicio {
+            color:white;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+    <title>Tipos de Sistemas de Archivos y Sistemas Operativos</title>
+</head>
+<body>
+    <h1><u>Tipos de Sistemas de Archivos y Sistemas Operativos</u></h1><br>
+
+    <h2>¿Que es un Sistema de Archivos?</h2>
+    <p>Un sistema de archivos es la forma en que se nombran los archivos y dónde se colocan lógicamente para su almacenamiento y recuperación. Sin un sistema de archivos, la información almacenada no estaría aislada en archivos individuales y sería difícil de identificar y recuperar. A medida que aumentan las capacidades de datos, la organización y la accesibilidad de los archivos individuales se vuelven aún más importantes en el almacenamiento de datos.</p><br>
+    <p>Los sistemas de archivos digitales y los archivos tienen el nombre y el modelo de los sistemas de archivo en papel que utilizan el mismo método basado en la lógica para almacenar y recuperar documentos.</p><br>
+    <p>Los sistemas de archivos pueden diferir entre los sistemas operativos (SO), como Microsoft Windows, macOS y sistemas basados en Linux. Algunos sistemas de archivos están diseñados para aplicaciones específicas. Los principales tipos de sistemas de archivos incluyen sistemas de archivos distribuidos, sistemas de archivos basados en disco y sistemas de archivos de propósito especial.</p><br>
+
+    <h2>Tipos de Sistemas de Archivos</h2>
+    <p>Hay varios tipos de sistemas de archivos, todos con diferentes estructuras lógicas y propiedades, como velocidad y tamaño. El tipo de sistema de archivos puede diferir según el sistema operativo y las necesidades de ese sistema operativo. Los tres sistemas operativos de PC más comunes son Windows, Mac OS y Linux. Los sistemas operativos móviles incluyen Apple iOS y Google Android.</p><br>
+
+    <div class="tabla">
+    <table>
+        <tr>
+            <th>Sistema de Archivo</th>
+            <th>Definición</th>
+            <th>Sistema Operativo</th>
+        </tr>
+        <tr>
+            <td class="center">FAT</td>
+            <td>Se considera simple y confiable, y se basa en los sistemas de archivos heredados. FAT se diseñó en 1977 para disquetes, pero luego se adaptó para discos duros. Si bien es eficiente y compatible con la mayoría de los sistemas operativos actuales, FAT no puede igualar el rendimiento y la escalabilidad de los sistemas de archivos más modernos.</td>
+            <td class="center">Windows</td>
+        </tr>
+        <tr>
+            <td class="center">GFS</td>
+            <td>Es un sistema de archivos de disco compartido. GFS ofrece acceso directo al almacenamiento de bloques compartidos y se puede utilizar como un sistema de archivos local.<br><br>
+
+            GFS2 es una versión actualizada con características no incluidas en el GFS original, como un sistema de metadatos actualizado. Según los términos de la Licencia pública general de GNU, los sistemas de archivos GFS y GFS2 están disponibles como software gratuito.</td>
+            <td class="center">Linux</td>
+        </tr>
+        <tr>
+            <td class="center">HFS</td>
+            <td>HFS también puede denominarse Mac OS Standard, y fue reemplazado por Mac OS Extended. Introducido originalmente en 1985 para disquetes y discos duros, HFS reemplazó el sistema de archivos original de Macintosh. También se puede utilizar en CD-ROM.</td>
+            <td class="center">Mac OS</td>
+        </tr>
+        <tr>
+            <td class="center">NTFS</td>
+            <td>Es el sistema de archivos predeterminado para los productos de Windows a partir del sistema operativo Windows NT 3.1. Las mejoras del sistema de archivos FAT anterior incluyen un mejor soporte de metadatos, rendimiento y uso del espacio en disco. NTFS también es compatible con el sistema operativo Linux a través de un controlador NTFS gratuito y de código abierto. Los sistemas operativos Mac tienen soporte de solo lectura para NTFS.</td>
+            <td class="center">Windows, Linux y Mac OS</td>
+        </tr>
+        <tr>
+            <td class="center">UDF</td>
+            <td>Es un sistema de archivos independiente del proveedor que se utiliza en medios ópticos y DVD. UDF reemplaza el sistema de archivos ISO 9660 y es el sistema de archivos oficial para video y audio DVD elegido por DVD Forum.</td>
+            <td class="center">Windows, Linux y Mac OS</td>
+        </tr>
+    </table>
+    </div>
+
+    <h2><u>CONSULTADO</u></h2>
+    <div>
+    <a href=https://www.techtarget.com/searchstorage/definition/file-system target="_blank">TechTarget - What is a File System?</a>
+    </div><br><hr>
+
+    <div>
+        <a href="index.html" class="inicio"><u>Inicio</u></a>
+    </div>
+</body>
+</html>

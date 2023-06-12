@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #0067b1;
+            color: white;
+            font-family:Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: yellow;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 1000px;
+            background-color: black;
+        }
+        .tabla {
+            display: flex;
+            justify-content: center;
+        }
+
+        td, th {
+            border: 1px solid gray;
+            text-align: left;
+            padding: 8px;
+        }
+        th{
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: white;
+            color: black;
+        }
+        .inicio {
+            color:white;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+    <title>10 Comandos de la Terminal de Linux</title>
+</head>
+<body>
+    <h1><u>10 Comandos de la Terminal de Linux</u></h1><br>
+
+    <div class="tabla">
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descripción</th>
+            <th>Ejemplo de Uso</th>
+        </tr>
+        <tr>
+            <td class="center">cd</td>
+            <td>Puede navegar por el sistema de archivos moviéndose de un directorio a otro. Para usar este comando, escriba “cd” seguido del nombre del directorio al que desea navegar.</td>
+            <td class="center">Si desea pasar al directorio Documentos, escriba "cd Documentos". <br><br>
+            Para navegar hacia arriba en un directorio, puede usar "..", y para navegar al directorio raíz, puede usar "/". Por ejemplo, para navegar un directorio hacia arriba desde "Documentos" y luego al directorio "Descargas", ingresaría: <br><br>
+            cd ../Descargas</td>
+        </tr>
+        <tr>
+            <td class="center">ls</td>
+            <td>Puede enumerar el contenido de un directorio, incluidos todos los archivos y directorios. Para usar este comando escriba “ls” seguido del nombre del directorio que desea enumerar. También puede usar opciones para mostrar archivos ocultos (“-a”), ordenar por tiempo de modificación (“-t”), etc.</td>
+            <td class="center">Si desea enumerar el contenido del directorio Documentos, escriba "ls Documentos". O simplemente use 'ls' para enumerar el contenido del directorio en el que se encuentra.</td>
+        </tr>
+        <tr>
+            <td class="center">cat</td>
+            <td>Se utiliza para mostrar el contenido de un archivo en la línea de comandos. Para usar este comando, simplemente escriba “cat” seguido del nombre del archivo que desea mostrar.</td>
+            <td class="center">Si desea mostrar el contenido de un archivo llamado "Texto_Aleatorio", debe escribir "cat Texto_Aleatorio".</td>
+        </tr>
+        <tr>
+            <td class="center">grep</td>
+            <td>Puede buscar padrones de texto específicos dentro de uno o más archivos. Para usar este comando, escriba “grep” seguido del patrón que desea buscar y el nombre de los archivos que desea buscar.</td>
+            <td class="center">Si desea buscar la palabra "texto" en un archivo llamado "Texto_Aleatorio", debe escribir "grep text Texto_Aleatorio". El texto correspondiente se resaltará con un color o tono diferente.</td>
+        </tr>
+        <tr>
+            <td class="center">mkdir</td>
+            <td>Se utiliza para crear un nuevo directorio. Para usar este comando, escriba “mkdir” seguido del nombre del nuevo directorio que desea crear.</td>
+            <td class="center">Si desea crear un nuevo directorio llamado "MiDirectorio", escriba "mkdir MiDirectorio".<br><br>
+            mkdir MiDirectorio</td>
+        </tr>
+        <tr>
+            <td class="center">rm</td>
+            <td>Se utiliza para eliminar archivos o directorios del sistema de archivos. Para usar este comando escriba “rm” seguido del nombre de los archivos que desea eliminar. Si desea eliminar un directorio, y todo su contenido, puede usar la opción “-r”.</td>
+            <td class="center">Si desea eliminar un archivo llamado "Texto_Aleatorio2", escriba "rm Texto_Aleatorio2". Si desea eliminar un directorio y todo su contenido, puede usar la opción "-r", así: "rm -r MiDirectorio".</td>
+        </tr>
+        <tr>
+            <td class="center">cp</td>
+            <td>Se utiliza para copiar archivos de una ubicación a otra. Para usar este comando, escriba “cp” seguido del nombre del archivo que desea copiar y la ubicación de destino.</td>
+            <td class="center">Si desea copiar un archivo llamado "Texto_Aleatorio" a un directorio llamado "MiDirectorio", debe escribir "cp Texto_Aleatorio MiDirectorio".</td>
+        </tr>
+        <tr>
+            <td class="center">mv</td>
+            <td>Se utiliza para mover o renombrar archivos. Para mover un archivo, escriba “mv” seguido del nombre del archivo que desea mostrar y la ubicación de destino.</td>
+            <td class="center">Si desea mover un archivo llamado "textfile" a un directorio llamado "Folder_1", debe escribir "mv textfile Folder_1". Para cambiar el nombre de un archivo, puede usar el mismo comando pero con un nombre de archivo de destino diferente. Por ejemplo, si desea cambiar el nombre de un archivo llamado "myfile.txt" a "newfile.txt", debe escribir "mv myfile.txt newfile.txt".</td>
+        </tr>
+        <tr>
+            <td class="center">chmod</td>
+            <td>Se utiliza para cambiar los permisos de archivos y directorios. Con este comando, puede especificar quién puede leer, escribir y ejecutar archivos o directorios. Para usar este comando, debe proporcionar una cadena de permiso, seguida del nombre del archivo o directorio para el que desea cambiar los permisos.</td>
+            <td class="center">Si desea otorgar permiso de lectura, escritura y ejecución al propietario de un archivo llamado "archivo de texto", debe escribir "archivo de texto chmod u+rwx". La "u" significa "usuario" y "rwx" significa "read, write, execute" &#40;leer, escribir y ejecutar&#41;.</td>
+        </tr>
+        <tr>
+            <td class="center">ping</td>
+            <td>Se utiliza para probar la conectividad de red entre su ordenador y un otro o un servidor. Con este comando, puede verificar si se puede acceder a un servidor remoto y cuánto tiempo lleva recibir una respuesta. Para usar este comando, escriba “ping” seguido de la dirección IP o el nombre de dominio del servidor remoto que desea probar.</td>
+            <td class="center">Si desea probar la conectividad a un servidor con la dirección IP "192.168.1.88", escriba "ping 192.168.1.88".</td>
+        </tr>
+    </table>
+    </div>
+
+    <h2><u>CONSULTADO</u></h2>
+    <div>
+    <a href=https://www.fosslinux.com/100562/15-essential-bash-commands-for-everyday-use.htm target="_blank">FOSS Linux - 15 Essential Bash Commands for Everyday Use</a>
+    </div><br><hr>
+
+    <div>
+        <a href="index.html" class="inicio"><u>Inicio</u></a>
+    </div>
+</body>
+</html>

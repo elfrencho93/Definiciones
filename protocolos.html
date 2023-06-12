@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #0067b1;
+            color: white;
+            font-family:Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: yellow;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 1000px;
+            background-color: black;
+        }
+        .tabla {
+            display: flex;
+            justify-content: center;
+        }
+
+        td, th {
+            border: 1px solid gray;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: white;
+            color: black;
+        }
+        .inicio {
+            color:white;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+    <title>Protocolos de Internet</title>
+</head>
+<body>
+    <h1><u>Protocolos de Internet</u></h1><br>
+
+    <h2>¿Que es el Protocolo de Internet?</h2>
+    <p>El Protocolo de Internet es un conjunto de reglas que rigen la comunicación y el intercambio de datos a través de Internet. Tanto el emisor como el receptor deben seguir los mismos protocolos para comunicar los datos. Para entenderlo mejor, tomemos un ejemplo de un idioma. Cualquier idioma tiene su propio conjunto de vocabulario y gramática que debemos conocer si queremos comunicarnos en ese idioma. De manera similar, en Internet, cada vez que accedemos a un sitio web o intercambiamos algunos datos con otro dispositivo, estos procesos se rigen por un conjunto de reglas llamadas protocolos de Internet.</p><br>
+
+    <h2>El Funcionamiento del Protocolo de Internet</h2>
+    <p>La Internet y muchas otras redes de datos funcionan organizando los datos en pequeñas piezas llamadas paquetes. Cada gran cantidad de datos enviados entre dos dispositivos de red se divide en paquetes más pequeños por el hardware y el software subyacentes. Cada protocolo de red define las reglas sobre cómo se deben organizar sus paquetes de datos de manera específica según los protocolos que admita la red.</p><br>
+
+    <h2>La Necesidad de Protocolos</h2>
+    <p>Puede ser que el remitente y el receptor de datos sean partes de diferentes redes, ubicadas en diferentes partes del mundo con diferentes tasas de transferencia de datos. Por lo tanto, necesitamos protocolos para administrar el control de flujo de datos y el control de acceso del enlace que se comparte en el canal de comunicación. Supongamos que hay un remitente X que tiene una tasa de transmisión de datos de 10 Mbps. Y hay un receptor Y que tiene una tasa de recepción de datos de 5 Mbps. Dado que la velocidad de recepción de datos es lenta, algunos datos se perderán durante la transmisión. Para evitar esto, el receptor Y debe informar al remitente X sobre la discrepancia de velocidad para que el remitente X pueda ajustar su velocidad de transmisión. De manera similar, el control de acceso decide el nodo que accederá al enlace compartido en el canal de comunicación en un instante de tiempo particular. De lo contrario, los datos transmitidos colisionarán si muchas computadoras envían datos simultáneamente a través del mismo enlace, lo que resultará en corrupción o pérdida de datos.</p><br>
+
+    <h2>¿Qué es el Direccionamiento IP?</h2>
+    <p>Una dirección IP representa una dirección de Protocolo de Internet. Una dirección única que identifica el dispositivo en la red. Es casi como un conjunto de reglas que rigen la estructura de los datos enviados a través de Internet oa través de una red local. Una dirección IP ayuda a Internet a distinguir entre diferentes enrutadores, computadoras y sitios web. Sirve como un identificador de máquina específico en una red específica y ayuda a mejorar la comunicación visual entre el origen y el destino.</p><br>
+
+    <div class="tabla">
+    <table>
+        <tr>
+            <th>Protocolo</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td class="center">TCP/IP</td>
+            <td>Estos son un conjunto de reglas estándar que permiten que diferentes tipos de computadoras se comuniquen entre sí. El protocolo IP asegura que cada computadora que está conectada a Internet tenga un número de serie específico llamado dirección IP. TCP especifica cómo se intercambian los datos a través de Internet y cómo se deben dividir en paquetes IP. También se asegura de que los paquetes tengan información sobre el origen de los datos del mensaje, el destino de los datos del mensaje, la secuencia en la que se deben volver a ensamblar los datos del mensaje y verifica si el mensaje se envió correctamente al destino específico. El TCP también se conoce como un protocolo orientado a la conexión.</td>
+        </tr>
+        <tr>
+            <td class="center">SMTP</td>
+            <td>Estos protocolos son importantes para enviar y distribuir correos electrónicos salientes. Este protocolo utiliza el encabezado del correo para obtener la identificación del correo electrónico del receptor e ingresa el correo en la cola de correo saliente. Y tan pronto como entrega el correo a la identificación del correo electrónico receptor, elimina el correo electrónico de la lista de correo saliente. El mensaje o el correo electrónico puede considerar el texto, video, imagen, etc. Ayuda a configurar algunas reglas del servidor de comunicaciones.</td>
+        </tr>
+        <tr>
+            <td class="center">PPP</td>
+            <td>Es un protocolo de comunicación que se utiliza para crear una conexión directa entre dos dispositivos que se comunican. Este protocolo define las reglas mediante las cuales dos dispositivos se autenticarán entre sí e intercambiarán información entre sí. Por ejemplo, un usuario conecta su PC al servidor de un proveedor de servicios de Internet y también usa PPP. De manera similar, para conectar dos enrutadores para comunicación directa, utiliza PPP.</td>
+        </tr>
+        <tr>
+            <td class="center">FTP</td>
+            <td>Este protocolo se utiliza para transferir archivos de un sistema a otro. Esto funciona en un modelo cliente-servidor. Cuando una máquina solicita la transferencia de archivos desde otra máquina, el FTO establece una conexión entre las dos y se autentica entre sí utilizando su ID y contraseña. Y, la transferencia de archivos deseada se lleva a cabo entre las máquinas.</td>
+        </tr>
+        <tr>
+            <td class="center">SFTP</td>
+            <td>SFTP, también conocido como SSH FTP, se refiere al Protocolo de transferencia de archivos (FTP) sobre Secure Shell (SSH), ya que cifra tanto los comandos como los datos durante la transmisión. SFTP actúa como una extensión de SSH y cifra los archivos y los datos y luego los envía a través de un flujo de datos de shell seguro. Este protocolo se utiliza para conectarse de forma remota a otros sistemas mientras se ejecutan comandos desde la línea de comandos.</td>
+        </tr>
+        <tr>
+            <td class="center">HTTP</td>
+            <td>Este protocolo se utiliza para transferir hipertextos a través de Internet y está definido por www (world wide web) para la transferencia de información. Este protocolo define cómo debe formatearse y transmitirse la información. Y también define las diversas acciones que los navegadores web deben tomar en respuesta a las llamadas realizadas para acceder a una página web en particular. Cada vez que un usuario abre su navegador web, el usuario usará indirectamente HTTP, ya que este es el protocolo que se usa para compartir texto, imágenes y otros archivos multimedia en la World Wide Web.</td>
+        </tr>
+        <tr>
+            <td class="center">HTTPS</td>
+            <td>HTTPS es una extensión del Protocolo de transferencia de hipertexto (HTTP). Se utiliza para la comunicación segura a través de una red informática con el protocolo SSL/TLS para el cifrado y la autenticación. Entonces, generalmente, un sitio web tiene un protocolo HTTP, pero si el sitio web recibe información confidencial, como detalles de la tarjeta de crédito, detalles de la tarjeta de débito, OTP, etc., entonces requiere un certificado SSL instalado para que el sitio web sea más seguro. Entonces, antes de ingresar información confidencial en un sitio web, debemos verificar si el enlace es HTTPS o no. Si no es HTTPS, es posible que no sea lo suficientemente seguro para ingresar información confidencial.</td>
+        </tr>
+        <tr>
+            <td class="center">TELNET</td>
+            <td>TELNET es un protocolo TCP/IP estándar utilizado para el servicio de terminal virtual proporcionado por ISO. Esto permite que una máquina local se conecte con otra. La computadora que se conecta se llama computadora remota y la que se conecta se llama computadora local. La operación TELNET nos permite mostrar cualquier cosa que se esté realizando en la computadora remota en la computadora local. Esto funciona según el principio cliente/servidor. La computadora local usa el programa cliente telnet mientras que la computadora remota usa el programa servidor telnet.</td>
+        </tr>
+        <tr>
+            <td class="center">POP3</td>
+            <td>POP3 significa Protocolo de oficina de correos versión 3. Tiene dos Agentes de acceso a mensajes (MAA), donde uno es el MAA (Agente de acceso a mensajes) del cliente y el otro es el MAA (Agente de acceso a mensajes) del servidor para acceder a los mensajes del buzón. Este protocolo nos ayuda a recuperar y administrar correos electrónicos desde el buzón en el servidor de correo del receptor a la computadora del receptor. Esto está implícito entre el receptor y el servidor de correo del receptor. También puede denominarse protocolo cliente-servidor unidireccional.</td>
+        </tr>
+        <tr>
+            <td class="center">IPv4</td>
+            <td>La cuarta e inicialmente ampliamente utilizada versión del Protocolo de Internet se llama IPv4 (Protocolo de Internet versión 4). Es la versión más popular del Protocolo de Internet y se encarga de distribuir los paquetes de datos por toda la red. Las direcciones únicas máximas para IPv4 son 4 294 967 296 (232), que son posibles debido al uso de direcciones de 32 bits. La dirección de red y la dirección de host son los dos componentes de cada dirección. La dirección de host identifica un dispositivo particular dentro de la red, mientras que la dirección de red identifica la red a la que pertenece el host. En la notación "decimal con puntos", que es el estándar para las direcciones IPv4, cada octeto (8 bits) de la dirección está representado por su valor decimal y separado por un punto (por ejemplo, 192.168.1.1).</td>
+        </tr>
+        <tr>
+            <td class="center">IPv6</td>
+            <td>La versión más reciente del Protocolo de Internet, IPv6, se creó para solucionar los inconvenientes del protocolo IPv4. Es posible un máximo de 4300 millones de direcciones únicas con las direcciones de 32 bits de IPv4. Por el contrario, IPv6 utiliza direcciones de 128 bits, lo que permite una cantidad significativamente mayor de direcciones únicas. Esto es significativo porque las direcciones IPv4 se estaban agotando y hay una cantidad cada vez mayor de dispositivos que requieren acceso a Internet. Además, IPv6 ofrece funciones de seguridad mejoradas, como autenticación y cifrado integrados, así como una mejor compatibilidad con dispositivos móviles. La compatibilidad con IPv6 se ha extendido entre los sitios web y los proveedores de servicios de Internet, y se prevé que desplace gradualmente a IPv4 como el principal protocolo de Internet.</td>
+        </tr>
+        <tr>
+            <td class="center">ICMP</td>
+            <td>ICMP (Protocolo de Mensajes de Control de Internet) es un protocolo de red que se utiliza para enviar mensajes de error e información operativa sobre las condiciones de la red. Es una parte integral del conjunto de protocolos de Internet (IP) y se utiliza para ayudar a diagnosticar y solucionar problemas de conectividad de red. Los mensajes ICMP generalmente son generados por dispositivos de red, como enrutadores, en respuesta a errores o condiciones excepcionales que se encuentran al reenviar un datagrama. Algunos ejemplos de mensajes ICMP incluyen:<br><br>
+            
+            Solicitud de eco y respuesta de eco (ping)<br>
+            Destino inalcanzable<br>
+            Tiempo excedido<br>
+            Redirigir<br><br>
+
+            Las herramientas de gestión de red también pueden utilizar ICMP para probar la accesibilidad de un host y medir el tiempo de ida y vuelta de los paquetes desde el origen hasta el destino y viceversa. Cabe señalar que ICMP no es un protocolo seguro, puede usarse en algunos tipos de ataques de red como la amplificación DDoS.</td>
+        </tr>
+        <tr>
+            <td class="center">UDP</td>
+            <td>UDP (Protocolo de Datagramas de Usuario) es un protocolo de capa de transporte no confiable y sin conexión. A diferencia de TCP, no establece una conexión confiable entre los dispositivos antes de transmitir los datos y no garantiza que los paquetes de datos se reciban en el orden en que se enviaron o que se reciban en absoluto. En su lugar, UDP simplemente envía paquetes de datos a un destino sin ninguna verificación de errores o control de flujo. UDP se usa típicamente para aplicaciones en tiempo real, como transmisión de video y audio, juegos en línea y VoIP (Voice over Internet Protocol), donde una pequeña cantidad de datos perdidos es aceptable y una baja latencia es importante. UDP es más rápido que TCP porque tiene menos sobrecarga. No necesita establecer una conexión, por lo que puede enviar paquetes de datos de inmediato. Tampoco necesita esperar la confirmación de que se recibieron los datos antes de enviar más, por lo que puede transmitir datos a una velocidad más alta.</td>
+        </tr>
+        <tr>
+            <td class="center">IMAP</td>
+            <td>IMAP (Protocolo de Acceso a Mensajes de Internet) es un protocolo utilizado para recuperar correos electrónicos de un servidor de correo. Permite a los usuarios acceder y administrar sus correos electrónicos en el servidor, en lugar de descargarlos a un dispositivo local. Esto significa que el usuario puede acceder a sus correos electrónicos desde varios dispositivos y los correos electrónicos se sincronizarán en todos los dispositivos. IMAP es más flexible que POP3 (Protocolo de oficina de correos versión 3), ya que permite a los usuarios acceder y organizar sus correos electrónicos en el servidor, y también permite que varios usuarios accedan al mismo buzón.</td>
+        </tr>
+        <tr>
+            <td class="center">SSH</td>
+            <td>SSH (Secure Shell) es un protocolo utilizado para el inicio de sesión remoto seguro y otros servicios de red seguros. Proporciona una forma segura y encriptada de acceder y administrar servidores, dispositivos de red y otros sistemas informáticos de forma remota. SSH utiliza criptografía de clave pública para autenticar al usuario y cifrar los datos que se transmiten, lo que lo hace mucho más seguro que los protocolos tradicionales de inicio de sesión remoto, como Telnet. SSH también permite transferencias seguras de archivos utilizando los protocolos SCP (Secure Copy) y SFTP (Secure File Transfer Protocol). Es ampliamente utilizado en sistemas operativos basados en Unix y también está disponible para Windows. Es comúnmente utilizado por administradores de sistemas, desarrolladores y otros usuarios técnicos para acceder y administrar servidores y otros dispositivos de red de forma remota.</td>
+        </tr>
+        <tr>
+            <td class="center">Gopher</td>
+            <td>Gopher es un tipo de protocolo de recuperación de archivos que proporciona archivos descargables con alguna descripción para facilitar la administración, recuperación y búsqueda de archivos. Todos los archivos están ordenados en una computadora remota de manera estratificada. Es un protocolo antiguo y no se usa mucho hoy en día.</td>
+        </tr>
+    </table>
+    </div>
+
+    <h2><u>CONSULTADO</u></h2>
+    <div>
+    <a href=https://www.geeksforgeeks.org/types-of-internet-protocols/ target="_blank">Geeks For Geeks - Types of Internet Protocols</a>
+    </div><br><hr>
+
+    <div>
+        <a href="index.html" class="inicio"><u>Inicio</u></a>
+    </div>
+</body>
+</html>

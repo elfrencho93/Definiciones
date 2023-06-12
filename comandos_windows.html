@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #0067b1;
+            color: white;
+            font-family:Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: yellow;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 1000px;
+            background-color: black;
+        }
+        .tabla {
+            display: flex;
+            justify-content: center;
+        }
+
+        td, th {
+            border: 1px solid gray;
+            text-align: left;
+            padding: 8px;
+        }
+        th{
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: white;
+            color: black;
+        }
+        .inicio {
+            color:white;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+    <title>10 Comandos de CMD de Windows</title>
+</head>
+<body>
+    <h1><u>10 Comandos de CMD de Windows</u></h1><br>
+
+    <div class="tabla">
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descripción</th>
+            <th>Ejemplo de Uso</th>
+        </tr>
+        <tr>
+            <td class="center">git init</td>
+            <td>Es un comando que puede crear un nuevo repositorio. Es el primer comando para iniciar un nuevo proyecto en un repositorio de GitHub.</td>
+            <td class="center">$ git init &lt;nombre de repositorio&gt;</td>
+        </tr>
+        <tr>
+            <td class="center">git clone</td>
+            <td>Crea una copia de trabajo local del código fuente desde un repositorio remoto, El código se descarga en la máquina automáticamente cuando clonar un repositorio.</td>
+            <td class="center">$ git clone &lt;git-repo-url&gt;</td>
+        </tr>
+        <tr>
+            <td class="center">git branch</td>
+            <td>Agrega una nueva rama a una existente, ve todas las ramas existentes y elimina una rama.</td>
+            <td class="center">Crear una rama localmente: <br>
+                $ git branch &lt;nombre-de-rama&gt;<br><br>
+                Una lista de las ramas locales y remotos: <br>
+                $ git branch -a<br><br>
+                Ver todas las ramas y ver quien rama estas trabajando: <br>
+                $ git branch<br><br> % git branch --list<br><br>
+                Eliminar una rama: <br>
+                $ git branch -d &lt;nombre-de-rama&gt;<br><br>
+                Cambiar el nombre de la rama: <br>
+                $ git branch -m &lt;nombre-de-rama&gt; &lt;nuevo-nombre-de-rama&gt;</td>
+        </tr>
+        <tr>
+            <td class="center">git checkout</td>
+            <td>Podemos cambiar una rama existente o crear y cambiar a una nueva. Para hacer esto, la rama a la que desea cambiar debe estar presente en su sistema local y los cambios en su rama actual deben confirmarse antes de cambiar. También se puede utilizar para comprobar los archivos.</td>
+            <td class="center">Cambiar a la rama existente: <br>
+                $ git checkout &lt;nombre-de-ramal&gt;<br><br>
+                Crear y cambiar a la rama nueva: <br>
+                git checkout -b &lt;nuevo-nombre-de-rama&gt;</td>
+        </tr>
+        <tr>
+            <td class="center">git add</td>
+            <td>Este comando agrega sus cambios en un archivo al área de preparación para comprobar su versión local con la versión en el repositorio remoto.<br><br>
+
+            Debe agregarse al área de preparación usando el comando git add antes de confirmar un archivo nuevo o modificado.</td>
+            <td class="center">Añadir archivos específicos: <br>
+                $ git add &lt;nombre-de-archivo-1&gt; &lt;nombre-de-archivo-2&gt;<br><br>
+                Añadir todos los archivos nuevos, modificados y eliminados: <br>
+                $ git add -A<br><br>
+                Añadir archivos modificados y eliminados: <br>
+                $ git add -u</td>
+        </tr>
+        <tr>
+            <td class="center">git commit</td>
+            <td>Guarda los cambios en su repositorio local. Cada vez que confirme los cambios de su código, debe incluir una breve descripción de los cambios realizados. El mensaje ayuda a otros a comprender los cambios que se han realizado.</td>
+            <td class="center">Confirme cualquier archivo agregado con el comando git add y los archivos que se hayan modificado desde entonces: <br>
+            $ git commit -a<br><br>
+            Confirmar archivos con un mensaje: <br>
+            $ git commit -m "&lt;mensaje-confirmado&gt;"<br><br>
+            Puede reemplazar los dos comandos anteriores con el siguiente comando único: <br>
+            $ git commit -am "&lt;mensaje-confirmado&gt;"<br><br>
+            Modifique la última confirmación con los últimos cambios como una nueva confirmación: <br>
+            $ git commit -amend -m "&lt;mensaje-confirmado&gt;"</td>
+        </tr>
+        <tr>
+            <td class="center">git push</td>
+            <td>Empuja los cambios de archivo comprometidos desde el repositorio local al repositorio remoto para que otros puedan usarlos. También creará una rama con nombre en el repositorio remoto si no existe.</td>
+            <td class="center">$ git push<br><br>
+                $ git push &lt;remoto&gt; &lt;nombre-de-rama&gt;<br><br>
+            Si su rama es una recién creada, entonces necesita empujar la rama usando uno de los siguientes comandos: <br>
+            $ git push --set-upstream &lt;remoto&gt; &lt;nombre-de-rama&gt;<br><br>
+            $ git push -u origin &lt;nombre-de-rama&gt;</td>
+        </tr>
+        <tr>
+            <td class="center">git pull</td>
+            <td>Obtiene los últimos cambios cargados desde el servidor remoto al repositorio local para que pueda tener las últimas actualizaciones de sus compañeros.</td>
+            <td class="center">$ git pull<br><br>
+                $ git pull &lt;remoto&gt;<br><br>
+                $ git pull &lt;remoto&gt; &lt;nombre-de-rama&gt;</td>
+        </tr>
+        <tr>
+            <td class="center">git merge</td>
+            <td>El comando mezcla su rama con su rama principal. La rama principal puede ser una rama maestra (master) o de desarrollo según su flujo de trabajo.<br><br>
+
+            Crea automáticamente una nueva confirmación si no hay ningún conflicto. Antes de ejecutar este comando, debe estar en la rama específica que desea mezclar con su rama principal.</td>
+            <td class="center">Cambie a la rama en la que desea fusionar todo: <br>
+                $ git checkout &lt;rama&gt;<br><br>
+            Comando para obtener las últimas actualizaciones. Hay 2 opciones: <br>
+                $ git pull <br><br>
+                $ git fetch <br><br>
+            Si no hay conflictos al extraer las actualizaciones, puede fusionar su rama con la rama principal.<br><br>
+            Fusionar su rama: <br>
+                $ git merge</td>
+        </tr>
+        <tr>
+            <td class="center">git status</td>
+            <td>Esto proporciona una descripción general del estado actual de su repositorio.</td>
+            <td class="center">$ git init &lt;status&gt;<br><br>
+            Devuelve la siguiente información sobre su rama: <br>
+            Su nombre de rama actual.<br><br>
+            Si su rama actual está actualizada o no.<br><br>
+            Número de confirmaciones que su rama está detrás de su rama remota.<br><br>
+            Cambios que se escenifican y se van a comprometer.<br><br>
+            Cambios que no están preparados para la confirmación.<br><br>
+            Archivos sin seguimiento.</td>
+        </tr>
+    </table>
+    </div>
+
+    <h2><u>CONSULTADO</u></h2>
+    <div>
+    <a href=https://www.syncfusion.com/blogs/post/top-10-git-commands-every-developer-should-know.aspx target="_blank">Syncfusion - Top 10 Commands Every Developer Should Know</a>
+    </div><br><hr>
+
+    <div>
+        <a href="index.html" class="inicio"><u>Inicio</u></a>
+    </div>
+</body>
+</html>

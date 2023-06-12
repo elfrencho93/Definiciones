@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #0067b1;
+            color: white;
+            font-family:Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: yellow;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 1000px;
+            background-color: black;
+        }
+        .tabla {
+            display: flex;
+            justify-content: center;
+        }
+
+        td, th {
+            border: 1px solid gray;
+            text-align: left;
+            padding: 8px;
+        }
+        th{
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: white;
+            color: black;
+        }
+        .inicio {
+            color:white;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+    <title>5 Comandos del Protocolo FTP</title>
+</head>
+<body>
+    <h1><u>5 Comandos del Protocolo FTP</u></h1><br>
+
+    <div class="tabla">
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descripción</th>
+            <th>Ejemplo de Uso</th>
+        </tr>
+        <tr>
+            <td class="center">open</td>
+            <td>Establece una conexión con el servidor FTP en el host especificado por el parámetro HostName. Si se especifica el número de puerto opcional, el comando ftp intenta conectarse a un servidor en ese puerto. Si la función de inicio de sesión automático está configurada (es decir, el indicador -n no se especificó en la línea de comandos), el comando ftp intenta iniciar la sesión del usuario en el servidor FTP.</td>
+            <td class="center">Sintaxis:<br>
+            open &lt;computer&gt; [&lt;port&gt;]<br><br>
+            &lt;computer&gt;: Especifica el ordenador remoto a el que está intentando conectarse. Puede usar una dirección IP o un nombre de ordenador (en cuyo caso debe estar disponible un servidor DNS o un archivo Hosts).<br><br>
+            [&lt;port&gt;]: Especifica un número de puerto TCP que se usará para conectarse a un servidor ftp. De forma predeterminada, se utiliza el puerto TCP 21.<br><br>
+            Para conectarse al servidor ftp en ftp.microsoft.com, escriba:<br>
+            open ftp.microsoft.com<br><br>
+            Para conectarse al servidor ftp en ftp.microsoft.com que está escuchando en el puerto TCP 755, escriba:<br>
+            open ftp.microsoft.com 755</td>
+        </tr>
+        <tr>
+            <td class="center">append</td>
+            <td>Agrega un archivo local a un archivo en el host remoto. Si no se especifica el nombre del archivo remoto, se usa el nombre del archivo local, modificado por cualquier configuración realizada con el subcomando ntrans o el subcomando nmap. El subcomando append usa los valores actuales para los subcomandos form, mode, struct y type al agregar el archivo.</td>
+            <td class="center">Sintaxis:<br>
+                append &lt;localfile&gt; [&lt;remotefile&gt;]<br><br>
+                &lt;localfile&gt;: Especifica el archivo local para agregar.<br><br>
+                [&lt;remotefile&gt;]: Especifica el archivo en el equipo remoto al que se agrega &lt;localfile&gt;. Si no usa este parámetro, el nombre del &lt;localfile&gt; se usa en lugar del nombre del archivo remoto.<br><br>
+                Para agregar file1.txt a file2.txt en la computadora remota, escriba:<br>
+                append file1.txt file2.txt<br><br>
+                Para agregar el archivo1.txt local a un archivo llamado archivo1.txt en el ordenador remoto.<br>
+                append file1.txt</td>
+        </tr>
+        <tr>
+            <td class="center">hash</td>
+            <td>Alterna la impresión del signo de almohadilla (#). Cuando el subcomando hash está activado, el comando ftp muestra un signo hash por cada bloque de datos (1024 bytes) transferido.</td>
+            <td class="center">Sintaxis:<br>
+                hash<br><br>
+                Para alternar la impresión del signo de número (#) para cada bloque de datos que se transfiere, escriba:<br>
+                hash</td>
+        </tr>
+        <tr>
+            <td class="center">verbose</td>
+            <td>Alterna el modo detallado. Cuando el modo detallado está activado (predeterminado), el comando ftp muestra todas las respuestas del servidor FTP remoto. Además, el comando ftp muestra estadísticas sobre todas las transferencias de archivos cuando se completan.</td>
+            <td class="center">Sintaxis:<br>
+                verbose<br><br>
+                Para activar y desactivar el modo detallado, escriba:<br>
+                verbose</td>
+        </tr>
+        <tr>
+            <td class="center">user</td>
+            <td>Identifica al usuario local (Usuario) en el servidor FTP remoto. Si no se especifica el parámetro Contraseña o Cuenta y el servidor remoto lo requiere, el comando ftp solicita la contraseña o la cuenta localmente. Si se requiere el parámetro Cuenta, el comando ftp lo envía al servidor remoto después de que se completa el proceso de inicio de sesión remoto.</td>
+            <td class="center">Sintaxis:<br>
+                user &lt;usuario&gt; [&lt;contraseña&gt;] [&lt;cuenta&gt;]<br><br>
+                &lt;usuario&gt;: 
+                Especifica un nombre de usuario con el que iniciar sesión en el equipo remoto.<br><br>
+                [&lt;contraseña&gt;]: Especifica la contraseña para el nombre de usuario. Si no se especifica una contraseña pero es necesaria, el comando ftp solicita la contraseña.<br><br>
+                [&lt;cuenta&gt;]: Especifica una cuenta con la que iniciar sesión en el equipo remoto. Si no se especifica una cuenta pero se requiere, el comando ftp solicita la cuenta.<br><br>
+                Para especificar Usuario1 con la contraseña Contraseña1, escriba:<br><br>
+                user Usuario1 Contraseña1</td>
+        </tr>
+    </table>
+    </div>
+
+    <h2><u>CONSULTADOS</u></h2>
+    <div>
+        <h3>Definiciones</h3>
+    <a href=https://www.ibm.com/docs/en/aix/7.1?topic&#61;f-ftp-command target="_blank">IBM - ftp Command</a><br><br>
+    <h3>Ejemplos</h3>
+    <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ftp-open_1" target="_blank">Microsoft - open</a><br><br>
+    <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ftp-append" target="_blank">Microsoft - append</a><br><br>
+    <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ftp-hash_1" target="_blank">Microsoft - hash</a><br><br>
+    <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ftp-verbose_1" target="_blank">Microsoft - verbose</a><br><br>
+    <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ftp-user" target="_blank">Microsoft - user</a>
+
+    </div><br><hr>
+
+    <div>
+        <a href="index.html" class="inicio"><u>Inicio</u></a>
+    </div>
+</body>
+</html>
